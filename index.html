@@ -1,81 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sanjeevani Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjeevani Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: black;
-            color: white;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        header {
-            background: #111;
-            padding: 15px;
-            text-align: center;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            font-size: 18px;
-        }
+body {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: white;
+}
 
-        nav a:hover {
-            color: gray;
-        }
+/* HEADER */
+header {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
 
-        .hero {
-            text-align: center;
-            padding: 50px;
-        }
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
 
-        .hero img {
-            width: 150px;
-            border-radius: 50%;
-            box-shadow: 0 0 20px white;
-        }
+nav a:hover {
+    color: #00ffcc;
+}
 
-        button {
-            padding: 10px 20px;
-            background: white;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        section {
-            padding: 40px;
-            text-align: center;
-        }
+.hero img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #00ffcc;
+    margin-top: 20px;
+}
 
-        .card {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 10px;
-        }
+.hero h1 {
+    margin-top: 20px;
+}
 
-        footer {
-            background: #111;
-            text-align: center;
-            padding: 15px;
-        }
+.buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        .social a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            font-size: 18px;
-        }
+.email-btn {
+    background: white;
+}
 
-        .social a:hover {
-            color: gray;
-        }
-    </style>
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+}
+
+/* SECTIONS */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* PROJECTS */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #333;
+}
+
+/* SOCIAL */
+.social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+}
+
+.social a:hover {
+    background: #00ffcc;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+</style>
 </head>
 
 <body>
@@ -92,33 +142,42 @@
 
 <div class="hero">
     <h1>Hello, I am Sanjeevani 👋</h1>
-    <p>Aspiring Developer</p>
+    <p>Aspiring Web Developer</p>
 
     <img src="myphoto.jpg">
 
-    <br>
+    <div class="buttons">
+        <button class="email-btn"
+        onclick="window.location.href='mailto:sanjeevanibabar23@gmail.com'">
+        📩 Email
+        </button>
 
-    <!-- Email Button -->
-    <button onclick="window.location.href='mailto:sanjeevanibabar23@gmail.com'">
-        📩 Email Me
-    </button>
-
-    <!-- WhatsApp Button -->
-    <button onclick="window.open('https://wa.me/919987635719')">
-        📱 WhatsApp Me
-    </button>
+        <button class="whatsapp-btn"
+        onclick="window.open('https://wa.me/919987635719')">
+        📱 WhatsApp
+        </button>
+    </div>
 </div>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>I am learning web development and building my portfolio.</p>
+    <p>I am a beginner web developer learning HTML, CSS and building projects.</p>
 </section>
 
 <section id="projects">
     <h2>My Projects</h2>
 
-    <div class="card">Portfolio Website</div>
-    <div class="card">More projects coming soon...</div>
+    <div class="projects">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>This is my personal portfolio website.</p>
+        </div>
+
+        <div class="card">
+            <h3>Upcoming Project</h3>
+            <p>More projects coming soon...</p>
+        </div>
+    </div>
 </section>
 
 <section id="contact">
@@ -127,7 +186,7 @@
     <p>Email: sanjeevanibabar23@gmail.com</p>
 
     <div class="social">
-        <a href="https://www.instagram.com/sanjuuuu._00/" target="_blank">
+        <a href="https://www.instagram.com/sanjuuuu_.00/" target="_blank">
             📸 Instagram
         </a>
     </div>
